@@ -6,7 +6,7 @@ int main()
     std::cout << "Enter the number of elements in the array: ";
     std::cin >> n;
 
-    int myArray[n];
+    int *myArray=new int[n];
     int arraySum = 0;
 
     std::cout << "Enter " << n << " elements, one at a time:\n";
@@ -17,6 +17,7 @@ int main()
     }
 
     std::cout << "Sum of elements in the array: " << arraySum << std::endl;
+    delete []myArray;
 
     return 0;
 }
